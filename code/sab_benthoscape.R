@@ -154,39 +154,29 @@ curdo_box <- curdo_plot_bound%>%st_as_sfc()
   
 #Full scale
   p_sab <- ggplot() +
-    geom_sf(data = contour_250)+
+    geom_sf(data = benthoscape, aes(fill = class), alpha = 0.7, show.legend = FALSE) +
+    geom_sf(data = contour_250) +
     geom_sf(data = sab_coast_hr) + 
-    geom_sf(data = benthoscape, aes(fill = class), alpha = 0.7) +
-    geom_sf(data = sab_banks_benthoscape %>% filter(name == "Scatarie Bank"), 
-            aes(fill = class), linewidth = 0.9, col = "black") +
+    geom_sf(
+      data = sab_banks_benthoscape %>% filter(name == "Scatarie Bank"), 
+      fill = NA, 
+      linewidth = 0.9, 
+      col = "black"
+    ) +
     geom_sf(data = sab_zones, fill = NA) +
     geom_sf(data = sab_edna_meta, aes(shape = factor(year)), fill = "white", size = 1.5) +
     scale_shape_manual(values = 21:25) +
-    labs(fill = "Benthoscape Class", shape = "Sample Year") +
     coord_sf(xlim = plot_lims[c(1, 3)], ylim = plot_lims[c(2, 4)], expand = 0) +
     annotation_scale(location = "br") +
-    theme_bw() + # Must come BEFORE custom theme settings
+    labs(shape = "Sample Year") +
+    theme_bw() +
     theme(
       plot.margin = margin(5, 5, 5, 5),
-      legend.box = "vertical",
-      legend.title = element_text(size = 9, face = "bold"),
-      legend.text = element_text(size = 8),
-      legend.key.size = unit(0.4, "cm")
+      legend.position = "bottom"
     ) +
-    guides(
-      shape = guide_legend(
-        position = "bottom",
-        direction = "horizontal",
-        title.position = "top",
-        nrow = 1
-      ),
-      fill = guide_legend(
-        position = "right",
-        ncol = 1
-      )
-    )
+    guides(fill = "none")
   
-  ggsave("output/st_anns_bank_edna.jpg",p_sab,height=4,width=7,units="in",dpi=300)
+  ggsave("output/st_anns_bank_edna.jpg",p_sab,height=6,width=6,units="in",dpi=300)
   
 #make a plot of the banks together
   p_banks <- ggplot() +

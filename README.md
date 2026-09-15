@@ -2,7 +2,7 @@
 Analysis of diversity and species turnover in the St. Anns Bank Marine Protected Area through environmental DNA (eDNA)
 
 
-[](output/st_anns_bank_edna.jpg)
+![](output/st_anns_bank_edna.jpg)
 
 __Fig 1.__ eDNA sampling stations within the [St. Anns Bank Marine Protected Area](https://www.dfo-mpo.gc.ca/oceans/mpa-zpm/stanns-sainteanne/index-eng.html). 
 
