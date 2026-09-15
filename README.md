@@ -4,7 +4,7 @@ Analysis of diversity and species turnover in the St. Anns Bank Marine Protected
 
 ![](output/st_anns_bank_edna.jpg)
 
-__Fig 1.__ eDNA sampling stations within the [St. Anns Bank Marine Protected Area](https://www.dfo-mpo.gc.ca/oceans/mpa-zpm/stanns-sainteanne/index-eng.html). 
+__Fig 1.__ eDNA sampling stations within the [St. Anns Bank Marine Protected Area](https://www.dfo-mpo.gc.ca/oceans/mpa-zpm/stanns-sainteanne/index-eng.html). Black line denotes the 250m depth contour.
 
 ![](output/sab_edna_samples_bethoscape_banks.jpg)
 
